@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page2_background"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    tools:context=".page_9">
+
+    <TextView
+        android:id="@+id/page9_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:textSize="36sp"
+        android:textColor="@color/color1"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/page9_text1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="20dp"
+        android:paddingHorizontal="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/page9_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:textColor="@color/color2"
+            android:text="@string/page2_text2" />
+
+        <EditText
+            android:id="@+id/page9_editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textSize="16sp"
+            android:textColor="@color/color2"
+            android:backgroundTint="@color/color2"
+            android:layout_marginBottom="5dp"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/page9_text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="4dp"
+            android:fontFamily="@font/roboto"
+            android:textSize="18sp"
+            android:textColor="@color/color2"
+            android:text="@string/page2_text3" />
+
+        <EditText
+            android:id="@+id/page9_editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textSize="16sp"
+            android:textColor="@color/color2"
+            android:backgroundTint="@color/color2"
+            android:layout_marginBottom="5dp"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/page9_button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_effect1"
+        android:layout_marginHorizontal="30dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/color1"
+        android:textSize="18sp"
+        android:text="@string/page9_text2" />
+
+</LinearLayout>

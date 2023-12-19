@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/page3_background"
+    android:orientation="vertical"
+    android:gravity="center|bottom"
+    tools:context=".page_6">
+
+    <TextView
+        android:id="@+id/page6_text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaa"
+        android:textSize="36sp"
+        android:textColor="@color/color2"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginVertical="25dp"
+        android:gravity="center"
+        android:text="@string/page6_text1" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="220dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/page6_button1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="1"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="2"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="3"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="4"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="5"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="6"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="7"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="8"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="9"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="10"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="11"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/page6_button12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="80dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_effect1"
+                android:fontFamily="@font/roboto"
+                android:paddingVertical="5dp"
+                android:text="12"
+                android:textColor="@color/color1"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/page6_button13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_effect2"
+        android:layout_marginVertical="50dp"
+        android:layout_marginHorizontal="160dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto"
+        android:textSize="36sp"
+        android:text="@string/page4_text2" />
+</LinearLayout>

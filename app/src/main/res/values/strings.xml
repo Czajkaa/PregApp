@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">PregAPP</string>
+    <string name="toast1">Rejestracja przebiegła pozytywnie</string>
+
+    <string name="page1_text1">Zaloguj się</string>
+    <string name="page1_text2">Załóż konto</string>
+
+    <string name="page2_text1">Rejestracja</string>
+    <string name="page2_text2">Adres Email</string>
+    <string name="page2_text3">Hasło</string>
+    <string name="page2_text4">Powtórz hasło</string>
+
+    <string name="page3_text1">Czy wiesz ile dni trwa twój cykl?</string>
+
+    <string name="page4_text1">Wybierz ile dni trwa twój cykl</string>
+    <string name="page4_text2">OK</string>
+
+    <string name="page5_text1">Czy wiesz ile dni trwa twoja miesiączka?</string>
+
+    <string name="page6_text1">Wybierz ile dni trwa twója miesiączka</string>
+
+    <string name="page7_text1">Czy posiadasz dedykowane urządzenie?</string>
+
+    <string name="page8_text1">Podaj numer urządzenia:</string>
+
+    <string name="page9_text1">Logowanie</string>
+    <string name="page9_text2">Zaloguj</string>
+
+    <string name="page10_text1">Pomiar</string>
+    <string name="page10_text2">Monitorowanie cyklu</string>
+    <string name="page10_text3">Osoby upoważnione</string>
+
+    <string name="page12_text1">okres za</string>
+    <string name="page12_text2">00</string>
+    <string name="page12_text3">dni</string>
+    <string name="page12_text4">Miesiączka</string>
+    <string name="page12_text5">Dni płodne</string>
+    <string name="page12_text6">PMS</string>
+
+    <string name="page13_text1">Ta funkcja aplikacji jest dostępna tylko dla kobiet będących w ciąży. Dlatego przed kliknięciem przycisku poniżej, upewnij się czy zaszłaś w ciążę. W dalszym ciągu możesz zmienić tę opcje w swoim \nprofilu -> zmień dane</string>
+    <string name="page13_text2">Tak, jestem w ciąży</string>
+
+    <string name="page14_text1">Username</string>
+    <string name="page14_text2">Mail</string>
+    <string name="page14_text3">Płeć:</string>
+    <string name="page14_text3_1">Płeć</string>
+    <string name="page14_text4">Wiek:</string>
+    <string name="page14_text4_1">Wiek</string>
+    <string name="page14_text5">Waga:</string>
+    <string name="page14_text5_1">Waga</string>
+    <string name="page14_text6">Wzrost:</string>
+    <string name="page14_text6_1">Wzrost</string>
+    <string name="page14_text7">Poziom aktywności:</string>
+    <string name="page14_text7_1">Poziom aktywności</string>
+    <string name="page14_text8">Zmiana danych</string>
+    <string name="page14_text9">Wyloguj się</string>
+
+    <string name="page15_text1">Podaj swoje dane</string>
+    <string name="page15_text2">Płeć</string>
+    <string name="page15_text3">Wiek</string>
+    <string name="page15_text4">Waga</string>
+    <string name="page15_text5">Wzrost</string>
+    <string name="page15_text6">Poziom aktywności</string>
+
+    <string name="page16_text1">Zmień swoje dane</string>
+    <string name="page16_text2">Ciąża</string>
+    <string name="page16_text3">Zatwierdź</string>
+
+    <string name="page17_text1">Pomiar temperatury</string>
+    <string name="page17_text2">Pomiar ciśnienia i saturacji</string>
+    <string name="page17_text3">Wykres pomiarów</string>
+
+    <string name="page18_text1">1. Włącz urządzenie\n2. Przyłóż urządzenie do czoła\n3. Naciśnij przycisk na urządzeniu\n4. Poczekaj 10 sekund\n5. Sprawdź wartość pomiaru
+      na urządzeniu</string>
+
+    <string name="page19_text1">1. Włącz urządzenie\n2. Przyłóż palec na wskazane miejsce\n3. Naciśnij przycisk na urządzeniu\n4. Poczekaj 10 sekund\n5. Sprawdź wartość pomiaru
+      na urządzeniu</string>
+
+    <string name="page20_text1">Temperatura</string>
+    <string name="page20_text2">Ciśnienie</string>
+    <string name="page20_text3">Saturacja</string>
+
+    <string name="next">Dalej</string>
+
+    <string-array name="gender">
+        <item>Kobieta</item>
+        <item>Mężczyzna</item>
+    </string-array>
+
+    <string-array name="pregnant">
+        <item>Tak</item>
+        <item>Nie</item>
+    </string-array>
+
+    <string-array name="activity">
+        <item>Brak</item>
+        <item>Niska</item>
+        <item>Średnia</item>
+        <item>Wysoka</item>
+        <item>Bardzo wysoka</item>
+    </string-array>
+
+</resources>
