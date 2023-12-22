@@ -80,6 +80,11 @@
     <string name="page20_text2">Ciśnienie</string>
     <string name="page20_text3">Saturacja</string>
 
+    <string name="page21_text1">Aby zapewnić prawidłowy przyrost wagi, limit kaloryczny wynosi</string>
+    <string name="page21_text2">Trymestr</string>
+    <string name="page21_text3">kcal</string>
+    <string name="page21_text4">Czasomierz skurczy</string>
+    <string name="page21_text5">Najbliższy szpital</string>
     <string name="next">Dalej</string>
 
     <string-array name="gender">

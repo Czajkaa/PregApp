@@ -10,7 +10,7 @@ class page_13 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page13)
-
+        
         val icon1 = findViewById<ImageButton>(R.id.page13_icon1)
         icon1.setOnClickListener{
             val page10 = Intent(applicationContext, page_10::class.java)

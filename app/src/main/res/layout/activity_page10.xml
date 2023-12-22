@@ -38,6 +38,7 @@
             android:fontFamily="@font/roboto"
             android:textColor="@color/color1"
             android:textSize="18sp"
+            android:enabled="false"
             android:text="@string/page10_text2" />
 
         <Button
