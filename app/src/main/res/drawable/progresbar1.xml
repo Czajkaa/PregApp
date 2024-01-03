@@ -20,9 +20,9 @@
                     android:type="sweep"
                     android:centerX="0.6"
                     android:centerY="0.5"
-                    android:startColor="@color/gradient_1"
-                    android:centerColor="@color/gradient_2"
-                    android:endColor="@color/gradient_3" />
+                    android:startColor="@color/gradient1_1"
+                    android:centerColor="@color/gradient1_2"
+                    android:endColor="@color/gradient1_3" />
             </shape>
         </rotate>
     </item>

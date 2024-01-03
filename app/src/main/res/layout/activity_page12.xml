@@ -116,7 +116,7 @@ tools:context=".page_12">
         android:layout_marginTop="40dp"
         android:fontFamily="@font/roboto"
         android:textSize="15sp"
-        android:textColor="@color/gradient_1"
+        android:textColor="@color/gradient1_1"
         android:text="@string/page12_text4" />
 
     <TextView
@@ -132,7 +132,7 @@ tools:context=".page_12">
         android:layout_marginTop="270dp"
         android:fontFamily="@font/roboto"
         android:textSize="15sp"
-        android:textColor="@color/gradient_2"
+        android:textColor="@color/gradient1_2"
         android:text="@string/page12_text5" />
 
     <TextView
@@ -148,7 +148,7 @@ tools:context=".page_12">
         android:layout_marginTop="-60dp"
         android:fontFamily="@font/roboto"
         android:textSize="15sp"
-        android:textColor="@color/gradient_3"
+        android:textColor="@color/gradient1_3"
         android:text="@string/page12_text6" />
 
 

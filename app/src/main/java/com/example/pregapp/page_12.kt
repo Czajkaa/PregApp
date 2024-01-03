@@ -11,6 +11,12 @@ class page_12 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page12)
 
+        val button1 = findViewById<ImageButton>(R.id.page12_image2)
+        button1.setOnClickListener{
+            val page24 = Intent(applicationContext, page_24::class.java)
+            startActivity(page24)
+        }
+
         val icon1 = findViewById<ImageButton>(R.id.page12_icon1)
         icon1.setOnClickListener {
             val page10 = Intent(applicationContext, page_10::class.java)

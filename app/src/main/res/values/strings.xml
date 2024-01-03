@@ -27,7 +27,7 @@
     <string name="page9_text2">Zaloguj</string>
 
     <string name="page10_text1">Pomiar</string>
-    <string name="page10_text2">Monitorowanie cyklu</string>
+    <string name="page10_text2">Notatnik</string>
     <string name="page10_text3">Osoby upoważnione</string>
 
     <string name="page12_text1">okres za</string>
@@ -37,7 +37,7 @@
     <string name="page12_text5">Dni płodne</string>
     <string name="page12_text6">PMS</string>
 
-    <string name="page13_text1">Ta funkcja aplikacji jest dostępna tylko dla kobiet będących w ciąży. Dlatego przed kliknięciem przycisku poniżej, upewnij się czy zaszłaś w ciążę. W dalszym ciągu możesz zmienić tę opcje w swoim \nprofilu -> zmień dane</string>
+    <string name="page13_text1">Ta funkcja aplikacji jest dostępna tylko dla kobiet będących w ciąży. Dlatego przed kliknięciem przycisku poniżej, upewnij się czy zaszłaś w ciążę. W dalszym ciągu możesz zmienić tę opcje w swoim \nprofilu -> zmiana danych</string>
     <string name="page13_text2">Tak, jestem w ciąży</string>
 
     <string name="page14_text1">Username</string>
@@ -80,12 +80,24 @@
     <string name="page20_text2">Ciśnienie</string>
     <string name="page20_text3">Saturacja</string>
 
-    <string name="page21_text1">Aby zapewnić prawidłowy przyrost wagi, limit kaloryczny wynosi</string>
+    <string name="page21_text1">Aby zapewnić prawidłowy przyrost wagi, limit kaloryczny wynosi:</string>
     <string name="page21_text2">Trymestr</string>
     <string name="page21_text3">kcal</string>
     <string name="page21_text4">Czasomierz skurczy</string>
     <string name="page21_text5">Najbliższy szpital</string>
     <string name="next">Dalej</string>
+
+    <string name="page22_text1">Jeśli odejdą Ci wody lub zaczniesz silnie krwawić należy natychmiast udać się do szpitala!</string>
+    <string name="page22_text2">Monitoruj skurcze i aplikacja poinformuje Cię, czy czas udać się do szpitala</string>
+    <string name="page22_text3">SKURCZ</string>
+    <string name="page22_text4">rozpoczął się</string>
+
+    <string name="page24_text1">Ustawienia</string>
+    <string name="page24_text2">Opcje Powiadomień</string>
+    <string name="page24_text3">Otrzymywanie powiadomień</string>
+    <string name="page24_text4">Opcje Monitorowania cyklu</string>
+    <string name="page24_text5">Osoby upoważnione</string>
+    <string name="page24_text6">Wygeneruj kod udostępniania</string>
 
     <string-array name="gender">
         <item>Kobieta</item>
@@ -103,6 +115,10 @@
         <item>Średnia</item>
         <item>Wysoka</item>
         <item>Bardzo wysoka</item>
+    </string-array>
+
+    <string-array name="calendar">
+        <item>kalendarz miesiączkowy</item>
     </string-array>
 
 </resources>
