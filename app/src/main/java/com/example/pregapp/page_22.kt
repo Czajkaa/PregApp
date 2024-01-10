@@ -11,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.ScrollView
 import android.widget.TextView
+import android.widget.Toolbar.LayoutParams
 
 class page_22 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,12 +56,42 @@ class page_22 : AppCompatActivity() {
         val text1 = findViewById<TextView>(R.id.page22_text1)
         val text2 = findViewById<TextView>(R.id.page22_text2)
         val scrollView = findViewById<ScrollView>(R.id.page22_scrollView)
+        val border1 = findViewById<View>(R.id.page22_border1)
+        val border2 = findViewById<View>(R.id.page22_border2)
+        val first = findViewById<TextView>(R.id.page22_line1)
+        val second = findViewById<TextView>(R.id.page22_line2)
+        val third = findViewById<TextView>(R.id.page22_line3)
 
-        if(number == 1) {
-            text1.visibility = View.GONE
-            text2.visibility = View.GONE
-            scrollView.visibility = View.VISIBLE
+        when (number) {
+            1 -> {
+                text1.visibility = View.GONE
+                text2.visibility = View.GONE
+                scrollView.visibility = View.VISIBLE
+                first.visibility = View.VISIBLE
+            }
 
+            2 -> {
+                border2.visibility = View.VISIBLE
+                second.visibility = View.VISIBLE
+            }
+            3 -> {
+                val params0 = RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, (number-1)*100+30)
+                val params1 = RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+                params1.setMargins(0, (number-2)*100+80, 0, 0)
+                val params2 = RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+                params2.setMargins(0, (number-2)*100+80/2, 0, (number-2)*100+80/2)
+                val params3 = RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+                params3.setMargins(0, 90, 0, (number-2)*100+80)
+
+                border1.layoutParams = params0
+                first.layoutParams = params1
+                second.layoutParams = params2
+                third.layoutParams = params3
+
+                border2.visibility = View.VISIBLE
+                second.visibility = View.VISIBLE
+                third.visibility = View.VISIBLE
+            }
         }
     }
 
