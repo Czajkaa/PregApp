@@ -16,15 +16,6 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/page14_text1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
-            android:textSize="26sp"
-            android:textColor="@color/color2"
-            android:text="@string/page14_text1" />
-
-        <TextView
             android:id="@+id/page14_text2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,6 +23,15 @@
             android:textSize="22sp"
             android:textColor="@color/color2"
             android:text="@string/page14_text2" />
+
+        <TextView
+            android:id="@+id/page14_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:textSize="20sp"
+            android:textColor="@color/color2"
+            android:text="@string/page14_text1" />
 
         <View
             android:id="@+id/page14_line1"

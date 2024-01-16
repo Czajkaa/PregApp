@@ -9,6 +9,10 @@
     <string name="page2_text2">Adres Email</string>
     <string name="page2_text3">Hasło</string>
     <string name="page2_text4">Powtórz hasło</string>
+    <string name="page2_card1">Minimum 6 znaków</string>
+    <string name="page2_card2">Minimum 1 liczba</string>
+    <string name="page2_card3">Minimum 1 specialny symbol</string>
+    <string name="page2_card4">Hasła muszą być takie same</string>
 
     <string name="page3_text1">Czy wiesz ile dni trwa twój cykl?</string>
 
