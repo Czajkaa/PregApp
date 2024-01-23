@@ -42,7 +42,9 @@
     <string name="page12_text6">PMS</string>
 
     <string name="page13_text1">Ta funkcja aplikacji jest dostępna tylko dla kobiet będących w ciąży. Dlatego przed kliknięciem przycisku poniżej, upewnij się czy zaszłaś w ciążę. W dalszym ciągu możesz zmienić tę opcje w swoim \nprofilu -> zmiana danych</string>
+    <string name="page13_text1_1">Funkcja ta jest dostępna tylko, jeżeli podałeś kod udostępniania. Tę opcje możesz znaleźć w swoim \nprofilu -> zmiana danych</string>
     <string name="page13_text2">Tak, jestem w ciąży</string>
+    <string name="page13_text3">Grtulacje, cieszymy się razem z Tobą</string>
 
     <string name="page14_text1">Username</string>
     <string name="page14_text2">Mail</string>
@@ -50,10 +52,13 @@
     <string name="page14_text3_1">Płeć</string>
     <string name="page14_text4">Wiek:</string>
     <string name="page14_text4_1">Wiek</string>
+    <string name="page14_text4_2">[lata]</string>
     <string name="page14_text5">Waga:</string>
     <string name="page14_text5_1">Waga</string>
+    <string name="page14_text5_2">[kg]</string>
     <string name="page14_text6">Wzrost:</string>
     <string name="page14_text6_1">Wzrost</string>
+    <string name="page14_text6_2">[cm]</string>
     <string name="page14_text7">Poziom aktywności:</string>
     <string name="page14_text7_1">Poziom aktywności</string>
     <string name="page14_text8">Zmiana danych</string>
@@ -68,7 +73,10 @@
 
     <string name="page16_text1">Zmień swoje dane</string>
     <string name="page16_text2">Ciąża</string>
-    <string name="page16_text3">Zatwierdź</string>
+    <string name="page16_text3">Cykl</string>
+    <string name="page16_text4">Miesiączka</string>
+    <string name="page16_text5">Zatwierdź</string>
+    <string name="page16_text6">Kod udostępnania</string>
 
     <string name="page17_text1">Pomiar temperatury</string>
     <string name="page17_text2">Pomiar ciśnienia i saturacji</string>
@@ -111,6 +119,47 @@
     <string-array name="pregnant">
         <item>Tak</item>
         <item>Nie</item>
+    </string-array>
+
+    <string-array name="cycle">
+        <item>0</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+    </string-array>
+
+    <string-array name="period">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
     </string-array>
 
     <string-array name="activity">

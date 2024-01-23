@@ -27,7 +27,7 @@ class page_8 : AppCompatActivity() {
         auth = Firebase.auth
         val user = md5(auth.currentUser?.email.toString())
         val database = FirebaseDatabase.getInstance("https://pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app").
-        reference.child("UserID").child(user).child("device")
+        reference.child("UserID").child(user).child("UserData").child("device")
 
         inputChanged(inputDevice)
 

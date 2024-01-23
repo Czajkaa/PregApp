@@ -9,6 +9,7 @@
     tools:context=".page_22">
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/page22_text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,6 +25,7 @@
         android:textSize="15sp" />
 
     <TextView
+        android:visibility="gone"
         android:id="@+id/page22_text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,27 +38,28 @@
         android:textSize="16sp" />
 
     <ScrollView
-        android:visibility="gone"
+
         android:id="@+id/page22_scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="20dp">
+        android:layout_height="450dp"
+        android:layout_marginVertical="20dp" >
 
         <RelativeLayout
             android:id="@+id/page22_relativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
+            android:layout_gravity="bottom"
             android:orientation="vertical">
 
             <View
                 android:id="@+id/page22_border1"
                 android:layout_width="wrap_content"
-                android:layout_height="130dp"
+                android:layout_height="150dp"
                 android:background="@color/transparent" />
 
             <View
-                android:visibility="gone"
+
                 android:id="@+id/page22_border2"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
@@ -65,8 +68,69 @@
                 android:layout_alignEnd="@+id/page22_border1"
                 android:layout_alignBottom="@+id/page22_border1"
                 android:layout_marginHorizontal="180dp"
-                android:layout_marginVertical="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:background="@color/color9" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_line6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginHorizontal="170dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="400dp"
+                android:background="@drawable/text_effect2"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_line5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginHorizontal="170dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="320dp"
+                android:background="@drawable/text_effect2"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_line4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginHorizontal="170dp"
+                android:layout_marginTop="160dp"
+                android:layout_marginBottom="240dp"
+                android:background="@drawable/text_effect2"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:visibility="gone"
@@ -78,8 +142,8 @@
                 android:layout_alignEnd="@+id/page22_border1"
                 android:layout_alignBottom="@+id/page22_border1"
                 android:layout_marginHorizontal="170dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginBottom="0dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginBottom="160dp"
                 android:background="@drawable/text_effect2"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
@@ -89,7 +153,7 @@
                 tools:ignore="HardcodedText" />
 
             <TextView
-                android:visibility="gone"
+
                 android:id="@+id/page22_line2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -98,7 +162,7 @@
                 android:layout_alignEnd="@+id/page22_border1"
                 android:layout_alignBottom="@+id/page22_border1"
                 android:layout_marginHorizontal="170dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="80dp"
                 android:background="@drawable/text_effect2"
                 android:fontFamily="@font/roboto"
@@ -117,7 +181,7 @@
                 android:layout_alignEnd="@+id/page22_border1"
                 android:layout_alignBottom="@+id/page22_border1"
                 android:layout_marginHorizontal="170dp"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="100dp"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/text_effect2"
                 android:fontFamily="@font/roboto"

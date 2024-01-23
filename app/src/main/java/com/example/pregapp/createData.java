@@ -9,8 +9,9 @@ public class createData {
     String howCycle;
     String howPeriod;
     String device;
+    String pragnet;
 
-    public createData(String gender, String age, String weight, String height, String activity, String howCycle, String howPeriod, String device) {
+    public createData(String gender, String age, String weight, String height, String activity, String howCycle, String howPeriod, String device, String pragnet) {
         this.gender = gender;
         this.age = age;
         this.weight = weight;
@@ -19,6 +20,7 @@ public class createData {
         this.howCycle = howCycle;
         this.howPeriod = howPeriod;
         this.device = device;
+        this.pragnet = pragnet;
     }
 
     public String getGender() {
@@ -51,5 +53,9 @@ public class createData {
 
     public String getDevice() {
         return device;
+    }
+
+    public String getPragnet() {
+        return pragnet;
     }
 }

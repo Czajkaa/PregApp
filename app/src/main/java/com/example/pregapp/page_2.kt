@@ -33,9 +33,6 @@ class page_2 : AppCompatActivity() {
         setContentView(R.layout.activity_page2)
 
         auth = Firebase.auth
-        val user = auth.currentUser.toString().substringAfter("com.google.firebase.auth.internal.zzaa@")
-        val database = FirebaseDatabase.getInstance("https://pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app").
-        reference.child("UserID").child(user).child("howPeriod")
 
         val inputEmail = findViewById<EditText>(R.id.page2_editText2)
         val inputPassword = findViewById<EditText>(R.id.page2_editText3)
@@ -180,8 +177,8 @@ class page_2 : AppCompatActivity() {
     private fun createUserData() {
         val user = md5(auth.currentUser?.email.toString())
         val database = FirebaseDatabase.getInstance("https://pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app").
-        reference.child("UserID").child(user)
-        val data = createData("brak", "0", "0", "0", "brak", "0", "0", "brak")
+        reference.child("UserID").child(user).child("UserData")
+        val data = createData("brak", "0", "0", "0", "brak", "0", "0", "brak", "0")
         database.setValue(data)
     }
 

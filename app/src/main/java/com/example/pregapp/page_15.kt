@@ -44,9 +44,13 @@ class page_15 : AppCompatActivity() {
 
             val user = md5(auth.currentUser?.email.toString())
             val database = FirebaseDatabase.getInstance("https://pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app").
-            reference.child("UserID").child(user)
-            val data = createData(gender, age, weight, height, activity, "0", "0", "brak")
+            reference.child("UserID").child(user).child("UserData")
+            val data = createData(gender, age, weight, height, activity, "0", "0", "brak", "0")
             database.setValue(data)
+
+            val database2 = FirebaseDatabase.getInstance("https://pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app").
+            reference.child("UserID").child(user).child("UserData").child("code")
+            database2.setValue("")
 
             if(gender == "Kobieta") {
                 val page3 = Intent(applicationContext, page_3::class.java)

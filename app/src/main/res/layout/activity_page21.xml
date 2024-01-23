@@ -169,7 +169,7 @@
             android:background="@drawable/button_effect2"
             android:layout_marginHorizontal="15dp"
             android:scaleType="fitXY"
-            android:src="@drawable/icon4"/>
+            android:src="@drawable/icon4_1"/>
 
         <ImageButton
             android:id="@+id/page21_icon5"

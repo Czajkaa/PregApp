@@ -5,7 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.Firebase
@@ -81,11 +83,13 @@ class page_14 : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 for (i in snapshot.children) {
                     if(i.key.toString() == hash) {
-                        gender.text = i.child("gender").value.toString()
-                        age.text = i.child("age").value.toString()
-                        weight.text = i.child("weight").value.toString()
-                        height.text = i.child("height").value.toString()
-                        activity.text = i.child("activity").value.toString()
+                        if(i.child("UserData").key.toString() == "UserData") {
+                            gender.text = i.child("UserData").child("gender").value.toString()
+                            age.text = i.child("UserData").child("age").value.toString()
+                            weight.text = i.child("UserData").child("weight").value.toString()
+                            height.text = i.child("UserData").child("height").value.toString()
+                            activity.text = i.child("UserData").child("activity").value.toString()
+                        }
                     }
                 }
             }
@@ -93,8 +97,8 @@ class page_14 : AppCompatActivity() {
             }
         }
         database.addListenerForSingleValueEvent(getdata)
-
     }
+
     fun md5(input:String): String {
         val md = MessageDigest.getInstance("MD5")
         return BigInteger(1, md.digest(input.toByteArray())).toString(16).padStart(32, '0')

@@ -21,7 +21,7 @@ class page_6 : AppCompatActivity() {
         auth = Firebase.auth
         val user = md5(auth.currentUser?.email.toString())
         val database = FirebaseDatabase.getInstance("https://pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app").
-        reference.child("UserID").child(user).child("howPeriod")
+        reference.child("UserID").child(user).child("UserData").child("howPeriod")
 
         val button13 = findViewById<Button>(R.id.page6_button13)
         button13.setOnClickListener{
