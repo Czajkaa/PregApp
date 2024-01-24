@@ -90,7 +90,7 @@ class page_21 : AppCompatActivity() {
                             val to = LocalDate.parse(date, dateFormatter)
 
                             when(Period.between(from, to).months*4) {
-                                in 1..13 -> trimester.text = "1"
+                                in 0..13 -> trimester.text = "1"
                                 in 14..27 -> trimester.text = "2"
                                 in 28..40 -> trimester.text = "3"
                                 else -> trimester.text = "0"
