@@ -29,28 +29,81 @@ tools:context=".page_12">
     </LinearLayout>
 
     <LinearLayout
-
+        android:visibility="gone"
         android:id="@+id/page12_Tlayout"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginBottom="150dp"
-        android:orientation="horizontal" >
+        android:gravity="center"
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/page13_text1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="85dp"
+            android:layout_marginHorizontal="85dp"
             android:fontFamily="@font/roboto"
             android:text="@string/page12_text7"
             android:textColor="@color/color1"
             android:gravity="center"
             android:textSize="20sp" />
 
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/page12_dateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/page12_dropdown1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/day"
+                android:background="@color/color5"
+                android:padding="2dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp" />
+
+            <Spinner
+                android:id="@+id/page12_dropdown2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/period"
+                android:background="@color/color5"
+                android:padding="2dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp" />
+
+            <Spinner
+                android:id="@+id/page12_dropdown3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/year"
+                android:background="@color/color5"
+                android:padding="2dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="10dp" />\
+
+        </LinearLayout>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/page12_button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_effect1"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="5dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/color1"
+            android:textSize="18sp"
+            android:text="@string/page16_text5" />
+
     </LinearLayout>
 
     <RelativeLayout
-        android:visibility="gone"
         android:id="@+id/page12_PBlayout"
         android:layout_width="wrap_content"
         android:layout_height="320dp"
@@ -123,7 +176,7 @@ tools:context=".page_12">
         android:layout_marginTop="-54dp"
         android:layout_marginBottom="-58dp"
         android:indeterminateOnly="false"
-        android:progress="99"
+        android:progress="75"
         android:progressDrawable="@drawable/progresbar1" />
 
     <TextView
