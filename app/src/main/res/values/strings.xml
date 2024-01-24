@@ -102,7 +102,10 @@
     <string name="page22_text1">Jeśli odejdą Ci wody lub zaczniesz silnie krwawić należy natychmiast udać się do szpitala!</string>
     <string name="page22_text2">Monitoruj skurcze i aplikacja poinformuje Cię, czy czas udać się do szpitala</string>
     <string name="page22_text3">SKURCZ</string>
-    <string name="page22_text4">rozpoczął się</string>
+    <string name="page22_text4_1">rozpoczął się</string>
+    <string name="page22_text4_2">skończył się</string>
+    <string name="page22_text5">Czas trwania</string>
+    <string name="page22_text6">Odstępy</string>
 
     <string name="page24_text1">Ustawienia</string>
     <string name="page24_text2">Opcje Powiadomień</string>

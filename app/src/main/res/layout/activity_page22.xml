@@ -9,7 +9,6 @@
     tools:context=".page_22">
 
     <TextView
-        android:visibility="gone"
         android:id="@+id/page22_text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,7 +24,6 @@
         android:textSize="15sp" />
 
     <TextView
-        android:visibility="gone"
         android:id="@+id/page22_text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,8 +35,40 @@
         android:textColor="@color/color1"
         android:textSize="16sp" />
 
-    <ScrollView
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/page22_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|bottom">
 
+        <TextView
+            android:id="@+id/page22_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/page22_text5"
+            android:textColor="@color/color1"
+            android:layout_marginEnd="90dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/page22_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/page22_text6"
+            android:textColor="@color/color1"
+            android:layout_marginStart="60dp"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:visibility="gone"
         android:id="@+id/page22_scrollView"
         android:layout_width="match_parent"
         android:layout_height="450dp"
@@ -55,11 +85,11 @@
             <View
                 android:id="@+id/page22_border1"
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
+                android:layout_height="450dp"
                 android:background="@color/transparent" />
 
             <View
-
+                android:visibility="gone"
                 android:id="@+id/page22_border2"
                 android:layout_width="30dp"
                 android:layout_height="50dp"
@@ -74,6 +104,26 @@
 
             <TextView
                 android:visibility="gone"
+                android:id="@+id/page22_time6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="230dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="400dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
                 android:id="@+id/page22_line6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -87,13 +137,55 @@
                 android:background="@drawable/text_effect2"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="6"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 tools:ignore="HardcodedText" />
 
+
             <TextView
                 android:visibility="gone"
+                android:id="@+id/page22_delay5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="230dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="360dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_time5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="230dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="320dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
                 android:id="@+id/page22_line5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,13 +199,54 @@
                 android:background="@drawable/text_effect2"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="5"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
                 android:visibility="gone"
+                android:id="@+id/page22_delay4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="230dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginBottom="280dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_time4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="230dp"
+                android:layout_marginTop="160dp"
+                android:layout_marginBottom="240dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
                 android:id="@+id/page22_line4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -127,13 +260,54 @@
                 android:background="@drawable/text_effect2"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="4"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
                 android:visibility="gone"
+                android:id="@+id/page22_delay3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="230dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginBottom="200dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_time3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="230dp"
+                android:layout_marginTop="240dp"
+                android:layout_marginBottom="160dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
                 android:id="@+id/page22_line3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -147,13 +321,54 @@
                 android:background="@drawable/text_effect2"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="3"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_delay2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="230dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="280dp"
+                android:layout_marginBottom="120dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
 
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="230dp"
+                android:layout_marginTop="320dp"
+                android:layout_marginBottom="80dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
                 android:id="@+id/page22_line2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -162,14 +377,56 @@
                 android:layout_alignEnd="@+id/page22_border1"
                 android:layout_alignBottom="@+id/page22_border1"
                 android:layout_marginHorizontal="170dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="320dp"
                 android:layout_marginBottom="80dp"
                 android:background="@drawable/text_effect2"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="2"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="26sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_delay1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="230dp"
+                android:layout_marginEnd="60dp"
+                android:layout_marginTop="360dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/page22_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/page22_border1"
+                android:layout_alignTop="@+id/page22_border1"
+                android:layout_alignEnd="@+id/page22_border1"
+                android:layout_alignBottom="@+id/page22_border1"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="230dp"
+                android:layout_marginTop="400dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/transparent"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -181,7 +438,7 @@
                 android:layout_alignEnd="@+id/page22_border1"
                 android:layout_alignBottom="@+id/page22_border1"
                 android:layout_marginHorizontal="170dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="400dp"
                 android:layout_marginBottom="0dp"
                 android:background="@drawable/text_effect2"
                 android:fontFamily="@font/roboto"
@@ -246,7 +503,7 @@
             android:layout_marginBottom="35dp"
             android:gravity="center|bottom"
             android:fontFamily="@font/roboto"
-            android:text="@string/page22_text4"
+            android:text="@string/page22_text4_1"
             android:textColor="@color/color1"
             android:textSize="12sp" />
 
