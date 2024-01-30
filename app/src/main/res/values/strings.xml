@@ -41,7 +41,7 @@
     <string name="page12_text5">Dni płodne</string>
     <string name="page12_text6">PMS</string>
     <string name="page12_text7">Ta opcja jest teraz nie dostępna, ponieważ jesteś w ciąży.</string>
-    <string name="page12_text8">Nie podano jeszcze daty końca ostatniego okresu. Wybierz datę:</string>
+    <string name="page12_text8">Nie podano jeszcze daty początku ostatniego okresu. Wybierz datę:</string>
 
     <string name="page13_text1">Ta funkcja aplikacji jest dostępna tylko dla kobiet będących w ciąży. Dlatego przed kliknięciem przycisku poniżej, upewnij się czy zaszłaś w ciążę. W dalszym ciągu możesz zmienić tę opcje w swoim \nprofilu -> zmiana danych</string>
     <string name="page13_text1_1">Funkcja ta jest dostępna tylko, jeżeli podałeś kod udostępniania. Tę opcje możesz znaleźć w swoim \nprofilu -> zmiana danych</string>

@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.LinearLayout
+import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.Spinner
 import android.widget.TextView
@@ -24,9 +25,14 @@ import java.time.LocalDate
 import java.time.Period
 import java.time.format.DateTimeFormatter
 import java.util.Calendar
+import java.text.SimpleDateFormat
+import java.util.*
+import java.util.concurrent.TimeUnit
+import kotlin.math.abs
 
 class page_12 : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page12)
@@ -85,6 +91,7 @@ class page_12 : AppCompatActivity() {
                                         val howCycle = i.child("UserData").child("howCycle").value.toString().toInt()
                                         val periodDate = i.child("UserData").child("periodDate").value.toString()
                                         calculateCycle (howPeriod, howCycle, periodDate)
+                                        cuttent_day_of_cycyle(howPeriod, howCycle, periodDate)
                                     } else {
                                         PBlayout.visibility = View.GONE
                                         Tlayout.visibility = View.VISIBLE
@@ -172,6 +179,45 @@ class page_12 : AppCompatActivity() {
     fun md5(input:String): String {
         val md = MessageDigest.getInstance("MD5")
         return BigInteger(1, md.digest(input.toByteArray())).toString(16).padStart(32, '0')
+    }
+
+    fun cuttent_day_of_cycyle(howPeriod: Int, howCycle: Int, periodDate: String){
+
+        var progress_bar = findViewById<ProgressBar>(R.id.page12_progressBar1)
+        var text1 = findViewById<TextView>(R.id.page12_text1)
+        var text2 = findViewById<TextView>(R.id.page12_text2)
+        var text3 = findViewById<TextView>(R.id.page12_text3)
+
+        // określenie sposobu parsowania daty
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+
+        // zaciągnięcie obecnej daty
+        val currentDate = Date()
+
+        // pars the DB periodDate entry in date format
+        val last_period_date = dateFormat.parse(periodDate)
+
+        val differenceInMilliseconds = currentDate.time - last_period_date.time
+        var differenceInDays = TimeUnit.DAYS.convert(differenceInMilliseconds, TimeUnit.MILLISECONDS)
+        val cycleProgress = differenceInDays * 100 / howCycle
+
+        if (differenceInDays <= howPeriod) {
+            text1.text = ""
+            text2.text = differenceInDays.toString()
+            text3.text = "dzień okresu"
+            progress_bar.progress = cycleProgress.toInt()
+        }else if (howPeriod < differenceInDays && differenceInDays <= howCycle) {
+            progress_bar.progress = cycleProgress.toInt()
+            text2.text = (howCycle - differenceInDays).toString()
+        }
+        else{
+            differenceInDays = abs(differenceInDays) - howCycle
+            progress_bar.progress = cycleProgress.toInt()
+            text1.text = "spóźnienie"
+            text2.text = differenceInDays.toString()
+            text3.text = "dni"
+        }
+
     }
 
     @SuppressLint("MissingSuperCall")
