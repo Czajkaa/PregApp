@@ -64,7 +64,7 @@
         android:layout_height="500dp"
         android:layout_marginVertical="30dp"
         android:layout_marginHorizontal="15dp"
-        android:background="@color/black_transparent"
+        android:background="@color/color10"
         />
 
     <LinearLayout
