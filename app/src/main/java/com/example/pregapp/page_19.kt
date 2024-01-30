@@ -23,6 +23,7 @@ class page_19 : AppCompatActivity() {
 
         auth = Firebase.auth
         val user = md5(auth.currentUser?.email.toString())
+        createData(user)
 
         val icon1 = findViewById<ImageButton>(R.id.page19_icon1)
         icon1.setOnClickListener{
@@ -49,6 +50,42 @@ class page_19 : AppCompatActivity() {
             val page14 = Intent(applicationContext, page_14::class.java)
             startActivity(page14)
         }
+    }
+
+    private fun createData(user: String) {
+        val database = FirebaseDatabase.getInstance("https://pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app").
+        reference.child("UserID")
+        val getdata = object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for (i in snapshot.children) {
+                    if(i.key.toString() == user) {
+                        if(!i.child("Measurement").child("Pressure").exists()) {
+                            val database1 =
+                                FirebaseDatabase.getInstance("https://pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app").reference.child(
+                                    "UserID"
+                                ).child(user).child("Measurement")
+                            database1.child("Pressure").child("Status").setValue(0)
+                            database1.child("Pressure").child("Number").setValue(0)
+                            database1.child("Pressure").child("Values").setValue("0")
+                        }
+                    }
+                    if(i.key.toString() == user) {
+                        if(!i.child("Measurement").child("Oxygen").exists()) {
+                            val database1 =
+                                FirebaseDatabase.getInstance("https://pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app").reference.child(
+                                    "UserID"
+                                ).child(user).child("Measurement")
+                            database1.child("Oxygen").child("Status").setValue(0)
+                            database1.child("Oxygen").child("Number").setValue(0)
+                            database1.child("Oxygen").child("Values").setValue("0")
+                        }
+                    }
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+            }
+        }
+        database.addValueEventListener(getdata)
     }
 
     fun md5(input:String): String {

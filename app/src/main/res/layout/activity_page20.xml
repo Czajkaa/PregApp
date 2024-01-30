@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/page10_background"
     android:orientation="vertical"
     android:gravity="center|bottom"
@@ -55,8 +56,16 @@
             android:paddingVertical="10dp"
             android:layout_marginHorizontal="5dp"
             android:text="@string/page20_text3" />
-
     </LinearLayout>
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/page20_plot1"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginVertical="30dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@color/black_transparent"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"

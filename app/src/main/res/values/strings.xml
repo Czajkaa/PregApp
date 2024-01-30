@@ -95,6 +95,7 @@
     <string name="page20_text1">Temperatura</string>
     <string name="page20_text2">Ciśnienie</string>
     <string name="page20_text3">Saturacja</string>
+    <string name="page20_text4">Wykres</string>
 
     <string name="page21_text1">Aby zapewnić prawidłowy przyrost wagi, limit kaloryczny wynosi:</string>
     <string name="page21_text2">Trymestr</string>
