@@ -4,11 +4,25 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
+import android.widget.Toast
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import java.math.BigInteger
+import java.security.MessageDigest
 
 class page_19 : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page19)
+
+        auth = Firebase.auth
+        val user = md5(auth.currentUser?.email.toString())
 
         val icon1 = findViewById<ImageButton>(R.id.page19_icon1)
         icon1.setOnClickListener{
@@ -35,5 +49,10 @@ class page_19 : AppCompatActivity() {
             val page14 = Intent(applicationContext, page_14::class.java)
             startActivity(page14)
         }
+    }
+
+    fun md5(input:String): String {
+        val md = MessageDigest.getInstance("MD5")
+        return BigInteger(1, md.digest(input.toByteArray())).toString(16).padStart(32, '0')
     }
 }

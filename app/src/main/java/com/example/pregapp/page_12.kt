@@ -70,7 +70,8 @@ class page_12 : AppCompatActivity() {
         val PBlayout = findViewById<RelativeLayout>(R.id.page12_PBlayout)
         val Tlayout = findViewById<LinearLayout>(R.id.page12_Tlayout)
         val dateLayout = findViewById<LinearLayout>(R.id.page12_dateLayout)
-        val text1 = findViewById<TextView>(R.id.page13_text1)
+        val text1 = findViewById<TextView>(R.id.page12_text7)
+        val text2 = findViewById<TextView>(R.id.page12_text2)
         val button1 = findViewById<Button>(R.id.page12_button1)
 
         val getdata = object : ValueEventListener {
@@ -84,7 +85,8 @@ class page_12 : AppCompatActivity() {
                                         val howPeriod = i.child("UserData").child("howPeriod").value.toString().toInt()
                                         val howCycle = i.child("UserData").child("howCycle").value.toString().toInt()
                                         val periodDate = i.child("UserData").child("periodDate").value.toString()
-                                        calculateCycle (howPeriod, howCycle, periodDate)
+
+                                        text2.text = calculateCycle(periodDate, howCycle, howPeriod).toString()
                                     } else {
                                         PBlayout.visibility = View.GONE
                                         Tlayout.visibility = View.VISIBLE
@@ -118,7 +120,7 @@ class page_12 : AppCompatActivity() {
         database.addListenerForSingleValueEvent(getdata)
     }
 
-    private fun calculateCycle (howPeriod: Int, howCycle: Int, periodDate: String) {
+    private fun calculateCycle (periodDate: String, howCycle: Int, howPeriod: Int): Int {
         val currentDate = Calendar.getInstance()
         val year = currentDate.get(Calendar.YEAR)
         val month = currentDate.get(Calendar.MONTH) + 1
@@ -128,25 +130,14 @@ class page_12 : AppCompatActivity() {
         else if (day < 10 && month >= 10) "0$day/$month/$year"
         else "$day/$month/$year"
 
-        var cycle_level = 0
-        var PMS_level = 0
-        var period_level = 0
+        val dateFormatter: DateTimeFormatter =  DateTimeFormatter.ofPattern("dd/MM/yyyy")
+        val from = LocalDate.parse(periodDate, dateFormatter)
+        val to = LocalDate.parse(date, dateFormatter)
+        val dayLeft = Period.between(from, to).days - howPeriod
+        if(dayLeft < 0) dayLeft + howCycle
+        if(dayLeft > 20) dayLeft - howCycle
 
-        val days = 5
-        when(days) {
-            in 0..(howCycle-howPeriod-2) -> {
-                cycle_level = days*100/(howCycle-howPeriod-2)
-            }
-            in (howCycle-howPeriod-1)..(howCycle-howPeriod) -> {
-                PMS_level = days*100/2
-            }
-            in (howCycle-howPeriod+1)..(howCycle) -> {
-                period_level = days*100/howPeriod
-            }
-        }
-
-
-
+        return dayLeft
     }
 
     private fun sendPeriodDate() {

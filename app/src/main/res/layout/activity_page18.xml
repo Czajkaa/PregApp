@@ -33,6 +33,18 @@
             android:textColor="@color/color2"
             android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/page18_button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_effect1"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/color1"
+            android:textSize="18sp"
+            android:text="@string/page18_text3" />
+
     </LinearLayout>
 
     <LinearLayout

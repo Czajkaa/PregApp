@@ -86,6 +86,8 @@
 
     <string name="page18_text1">1. Włącz urządzenie\n2. Przyłóż urządzenie do czoła\n3. Naciśnij przycisk na urządzeniu\n4. Poczekaj 10 sekund\n5. Sprawdź wartość pomiaru
       na urządzeniu</string>
+    <string name="page18_text2">Pomiar został wykonany</string>
+    <string name="page18_text3">Pomiar</string>
 
     <string name="page19_text1">1. Włącz urządzenie\n2. Przyłóż palec na wskazane miejsce\n3. Naciśnij przycisk na urządzeniu\n4. Poczekaj 10 sekund\n5. Sprawdź wartość pomiaru
       na urządzeniu</string>

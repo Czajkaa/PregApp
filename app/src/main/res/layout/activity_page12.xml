@@ -38,7 +38,7 @@ tools:context=".page_12">
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/page13_text1"
+            android:id="@+id/page12_text7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="85dp"
