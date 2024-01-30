@@ -2,8 +2,10 @@ package com.example.pregapp
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.LinearLayout
@@ -12,6 +14,8 @@ import android.widget.RelativeLayout
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.view.marginStart
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -29,6 +33,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.math.abs
+import kotlin.math.ceil
 
 class page_12 : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -43,6 +48,12 @@ class page_12 : AppCompatActivity() {
 
         val button1 = findViewById<ImageButton>(R.id.page12_image2)
         button1.setOnClickListener{
+            val page24 = Intent(applicationContext, page_24::class.java)
+            startActivity(page24)
+        }
+
+        val button2 = findViewById<ImageButton>(R.id.page12_btn_add_period)
+        button2.setOnClickListener{
             val page24 = Intent(applicationContext, page_24::class.java)
             startActivity(page24)
         }
@@ -93,8 +104,10 @@ class page_12 : AppCompatActivity() {
                                         calculateCycle (howPeriod, howCycle, periodDate)
                                         cuttent_day_of_cycyle(howPeriod, howCycle, periodDate)
                                     } else {
-                                        PBlayout.visibility = View.GONE
-                                        Tlayout.visibility = View.VISIBLE
+                                        //PBlayout.visibility = View.GONE
+                                        //Tlayout.visibility = View.VISIBLE
+                                        val pragnetDate = i.child("UserData").child("pragnetDate").value.toString()
+                                        calculate_day_to_labor(pragnetDate)
                                     }
                                 } else {
                                     PBlayout.visibility = View.GONE
@@ -217,6 +230,48 @@ class page_12 : AppCompatActivity() {
             text2.text = differenceInDays.toString()
             text3.text = "dni"
         }
+
+    }
+
+    fun calculate_day_to_labor(pragnetDate: String){
+        var progress_bar = findViewById<ProgressBar>(R.id.page12_progressBar1)
+        var text1 = findViewById<TextView>(R.id.page12_text1)
+        var text2 = findViewById<TextView>(R.id.page12_text2)
+        var text3 = findViewById<TextView>(R.id.page12_text3)
+        var text4 = findViewById<TextView>(R.id.page12_text4)
+        var text5 = findViewById<TextView>(R.id.page12_text5)
+        var text6 = findViewById<TextView>(R.id.page12_text6)
+
+        // określenie sposobu parsowania daty
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+
+        // zaciągnięcie obecnej daty
+        val currentDate = Date()
+
+        // pars the DB pregnancy start entry in date format
+        val preg_conf_date = dateFormat.parse(pragnetDate)
+
+        val differenceInMilliseconds = currentDate.time - preg_conf_date.time
+        var differenceInDays = TimeUnit.DAYS.convert(differenceInMilliseconds, TimeUnit.MILLISECONDS).toDouble()
+
+        var tyg  = ceil(differenceInDays/7).toInt()
+        var trym = if(tyg <= 14) 1
+        else if (14< tyg && tyg <= 28) 2
+        else 3
+
+        val till_labor = 280 - differenceInDays
+        val pragnancyProgress = differenceInDays * 100 / 280
+
+        //val customDrawable: Drawable? = ContextCompat.getDrawable(this, R.drawable.progresbar2)
+        //progress_bar.setProgressDrawableTiled(customDrawable)
+        progress_bar.progress = pragnancyProgress.toInt()
+
+        text1.text = "dni do porodu"
+        text2.text = till_labor.toInt().toString()
+        text3.text = "tydz. " + tyg.toString()
+        text4.text = "trymestr 1"
+        text5.text = "trymestr 2"
+        text6.text = "trymestr 3"
 
     }
 
