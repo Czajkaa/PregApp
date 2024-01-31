@@ -73,6 +73,7 @@ class page_21 : AppCompatActivity() {
                 for (i in snapshot.children) {
                     if(i.key.toString() == hash) {
                         if(i.child("UserData").key.toString() == "UserData") {
+                            var trimester_no = "-"
                             val trimester = findViewById<TextView>(R.id.page21_text3)
 
                             val pragnetDate = i.child("UserData").child("pragnetDate").value.toString()
@@ -90,11 +91,17 @@ class page_21 : AppCompatActivity() {
                             val to = LocalDate.parse(date, dateFormatter)
 
                             when(Period.between(from, to).months*4) {
-                                in 0..13 -> trimester.text = "1"
-                                in 14..27 -> trimester.text = "2"
-                                in 28..40 -> trimester.text = "3"
-                                else -> trimester.text = "0"
+                                in 0..13 -> trimester_no = "1"
+                                in 14..27 -> trimester_no = "2"
+                                in 28..40 -> trimester_no = "3"
+                                else -> trimester_no = "-"
                             }
+                            trimester.text = trimester_no.toString()
+
+                            val weight = i.child("UserData").child("weight").value.toString().toInt()
+                            val height = i.child("UserData").child("height").value.toString().toInt()
+
+                            kcal_per_trymestr(weight, height, trimester_no.toInt())
                         }
                     }
                 }
@@ -108,6 +115,21 @@ class page_21 : AppCompatActivity() {
     fun md5(input:String): String {
         val md = MessageDigest.getInstance("MD5")
         return BigInteger(1, md.digest(input.toByteArray())).toString(16).padStart(32, '0')
+    }
+
+    fun kcal_per_trymestr(weight: Int, height: Int, trimester: Int){
+        var total_E = 0.0
+        val base_E = 655.1 + (9.567 * weight) + (1.85 * height)
+        if (trimester == 1){
+            total_E = base_E
+        }else if(trimester == 2){
+            total_E = base_E + 360
+        } else {
+            total_E = base_E + 475
+        }
+
+        val kcal_text = findViewById<TextView>(R.id.page21_text5)
+        kcal_text.text = total_E.toInt().toString()
     }
 
     @SuppressLint("MissingSuperCall")
