@@ -4,10 +4,10 @@
 #include <Wire.h>
 #include <Adafruit_MLX90614.h>
 
-#define FIREBASE_HOST "pregapp-3f832-default-rtdb.europe-west1.firebasedatabase.app"
-#define FIREBASE_AUTH "AIzaSyCtYLEAZ0JF_k80JfSR63I5eE3G1k8wKN0"
-#define WIFI_SSID "Czajka"
-#define WIFI_PASSWORD "kitku_kitku"
+#define FIREBASE_HOST ""
+#define FIREBASE_AUTH ""
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
 FirebaseData firebaseData;
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
 double temp1 = 0.0;
